@@ -12,7 +12,10 @@ public class Cat {
 
     public void eat(Plate p) {
         if (p.decreaseFood(appetite)) fullness = true;
-        else System.out.printf("%s appetite: %s%n", name, appetite);
+        else {
+            fullness = false;
+            System.out.printf("%s appetite: %s%n", name, appetite);
+        }
     }
 
     public void info() {
